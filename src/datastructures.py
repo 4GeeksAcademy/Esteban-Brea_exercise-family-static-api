@@ -50,12 +50,13 @@ class FamilyStructure:
         for position in range(len(self._members)):
             if self._members[position]['id'] == int(id):
                 self._members.pop(position)
-        return self._members
+                return True
+        return False
 
     def get_member(self, id):
         # fill this method and update the return
         for member in self._members:
-            if member['id'] == int(id):
+            if member['id'] == id:
                 return member
         return None
 
